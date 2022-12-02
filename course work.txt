@@ -1,0 +1,147 @@
+\documentclass[a4paper]{article}
+\usepackage[14pt]{extsizes} % для того чтобы задать нестандартный 14-ый размер шрифта
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{setspace,amsmath}
+\usepackage{graphicx}%Вставка картинок правильная
+\usepackage{float}%"Плавающие" картинки
+\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+\usepackage[left=30mm, top=20mm, right=15mm, bottom=20mm, nohead, footskip=10mm]{geometry} % настройки полей документа
+\usepackage{mathtext}
+ 
+\begin{document} % начало документа
+ 
+% НАЧАЛО ТИТУЛЬНОГО ЛИСТА
+\begin{center}
+\hfill \break
+\large{МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ}\\
+\footnotesize{ФГОУ ВО "Уральский федеральный университет имени}\\
+\footnotesize{первого Президента России Б.Н. Ельцина"}\\ 
+\large{ИНСТИТУТ ЕСТЕСТВЕННЫХ НАУК И МАТЕМАТИКИ}\\
+\hfill \break
+\normalsize{Департамент механики, математики и компьютерных наук}\\
+ \hfill \break
+\normalsize{}\\
+\hfill\break
+\hfill \break
+\hfill \break
+\end{center}
+
+\begin{flushright}
+Оценка  \underline{\hspace{73mm}}\\
+Руководитель курсовой работы\underline{\hspace{21mm}}\\
+\underline{\hspace{90mm}}\\
+Члены комиссии\underline{\hspace{54mm}}\\
+\underline{\hspace{90mm}}\\
+\underline{\hspace{90mm}}\\
+Дата защиты \underline{\hspace{59mm}}\\
+\end{flushright}
+
+ \hfill \break
+ 
+\normalsize{ 
+\begin{tabular}{cccc}
+\large{Отчет}\\
+о курсовой работе\\
+по теме:\underline{\hspace{120mm}} & \\
+\end{tabular}
+}\\
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\begin{center} Екатеринбург 2022 \end{center}
+\thispagestyle{empty} % выключаем отображение номера для этой страницы
+ 
+% КОНЕЦ ТИТУЛЬНОГО ЛИСТА
+ 
+\newpage
+     
+    \tableofcontents % Вывод содержания
+\newpage
+ 
+\newpage
+\section{Введение}
+\newpage
+
+\newpage
+\section{Задача 12.21}
+    Система имеет две степени свободы, запишем для них уравнения Лагранжа 2-го рода: $$\frac{d}{dt} \frac{\partial T}{\partial \dot{x_{1}}} - \frac{\partial T}{\partial x_{1}} = -\frac{\partial \Pi}{\partial x_{1}} ; % первое ур-ие
+    \frac{d}{dt} \frac{\partial T}{\partial \dot{x_{2}}} - \frac{\partial T}{\partial x_{2}} = -\frac{\partial \Pi}{\partial x_{2}}$$ % второе ур-ие
+    где $x_{1}$ и $x_{2}$ - обобщенные координаты, а $T$ и $\Pi$ - кинетическая и потенциальная энергия соответсвенно. Полная кинетическая энергия - это сумма кинетических энергий грузиков. $T = T_{1} + T_{2} + T_{3}$ Рассчитаем энергии грузиков отдельно: 
+    $$T_{1} = \frac{m_{1}\dot{x_{1}}^2}{2};  
+    %
+    T_{2} = \frac{m_{2}\dot{x_{2}}^2}{2}; 
+    %
+    T_{3} = \frac{m_{3} + m_{3}}{2}{(\frac{\dot{x_{1}} + \dot{x_{2}}}{2}})^2$$ Получим полную кинетическую энергию
+    $$T = \frac{1}{2}(m_{1}\dot{x_{1}}^2 + m_{2}\dot{x_{2}}^2 + (m_{3} + m_{3})\frac{(\dot{x_{1}} + \dot{x_{2}})^2}{4})$$
+    Найдем частные производные кинетической энергии, которые требуются в уравнениях Легранжа 2 рода
+    $$\frac{\partial T}{\partial \dot{x}_{1}} = \frac{1}{2}(2m_{1}\dot{x}_{1} + (m_{3}+m_{4})\frac{\dot{x}_{1}+\dot{x}_{2}}{2})$$ 
+    %
+    $$\frac{d}{dt} \frac{\partial T}{\partial \dot{x}_{1}} = \frac{1}{2} (2m_{1}\ddot{x}_{1} + (m_{3}+m_{4})\frac{\ddot{x}_{1} + \ddot{x}_{2}}{2}$$
+    %
+    $$\frac{\partial T}{\partial \dot{x}_{2}} = \frac{1}{2}(2m_{2}\dot{x}_{2} + (m_{3}+m_{4})\frac{\dot{x}_{1} + \dot{x}_{2}}{2})$$
+    %
+    $$\frac{d}{dt} \frac{\partial T}{\partial \dot{x}_{2}} = m_{2}\ddot{x}_{2} + (m_{3}+m_{4})\frac{\ddot{x}_{1} + \ddot{x}_{2}}{4}$$
+    Пусть $M = m_{3}+m_{4}$. Придадим системе возможные перемещения, от куда найдем искомые частные производные потенциальной энергии (потенциальные силы). Пусть
+    $\delta x_{1} > 0, \delta x_{2} = 0$ Тогда 
+    $$\delta A_{x_{1}} = \frac{Mg}{2}\delta x_{1} - m_{1}g sin(\alpha)\delta x_{1}$$
+    Пусть $\delta x_{2} > 0, \delta x_{1} = 0$ Тогда 
+    $$\delta A_{x_{2}} = \frac{1}{2} Mg\delta x_{2} - f m_{2}g\delta x_{2}$$ Получаем значения для обобщенных сил:
+    $$Q_{x{1}} = \frac{1}{2}Mg - m_{1}g sin(\alpha), Q_{x{2}} = \frac{1}{2}Mg - fm_{2}g$$
+\newpage
+
+\newpage
+    Подставляем полученные значения в уравнения Лагранжа и получаем систему уравнений:
+    $$
+    \left\{ \begin{aligned} 
+        m_{1}\ddot{x}_{1}+\frac{M}{4}(\ddot{x}_{1} + \ddot{x}_{2}) = \frac{Mg}{2} - m_{1}g sin(\alpha)\\
+        m_{2}\ddot{x}_{2}+\frac{M}{4}(\ddot{x}_{1} + \ddot{x}_{2}) = \frac{Mg}{2} - fm_{2}g
+    \end{aligned} \right.
+    $$
+    Далее проводим преобразования системы
+    $$
+    \left\{ \begin{aligned} 
+        \ddot{x}_{1}(m_{1} + \frac{M}{4}) + \frac{M}{4}\ddot{x}_{2} = \frac{Mg}{2} - m_{1}g sin(\alpha)\\
+        \ddot{x}_{1}\frac{M}{4} + (m_{2} + \frac{M}{4})\ddot{x}_{2} = \frac{Mg}{2} - fm_{2}g
+    \end{aligned} \right.
+    $$
+    $$
+    \left\{ \begin{aligned} 
+        \ddot{x}_{1} + \frac{M\ddot{x}_{2}}{4m_{1}+M} = \frac{Mg}{2m_{1}+\frac{M}{2}} - \frac{m_{1}gsin(\alpha)}{m_{1} + \frac{M}{4}}\\
+        \ddot{x}_{1}+\frac{4(m_{2}+\frac{M}{4})}{M}\ddot{x}_{2} = 2g - \frac{4fm_{2}g}{M}
+    \end{aligned} \right.
+    $$
+    Выражаем $\ddot{x}_{2}$ из системы и получим:
+    $$\ddot{x}_{2}(\frac{M}{4m_{1}+M} - \frac{4(m_{2}+\frac{M}{4})}{M}) = \frac{Mg}{2m_{1}+\frac{M}{2}} - \frac{m_{1}gsin(\alpha)}{m_{1} + \frac{M}{4}} - 2g + \frac{4fm_{2}g}{M}$$
+    Выразим все массы через $m_{1}$, исходя из условий задачи
+    $$m_{1} = m_{1}, m_{2} = 1.5m_{1}, m_{3} = 0.5m_{1}, m_{4} = 0.2m_{1}, M = 0.7m_{1}$$
+    Посчитаем правую часть выражения для $\ddot{x}_{2}$
+    $$\frac{0.7\cdot9.8\cdot m_{1}}{2m_{1}+\frac{0.7m_{1}}{2}} - \frac{m_{1}\cdot 9.8 \cdot 0.5}{m_{1}+\frac{0.7m_{1}}{4}} - 2 \cdot 9.8 + \frac{4 \cdot 0.2 \cdot 1.5m_{1} \cdot 9.8}{0.7m_{1}} = - 4.05$$
+    Посчитаем левую часть:
+    $$\frac{0.7m_{1}}{4m_{1}+0.7m_{1}} - \frac{4(1.5m_{1}+\frac{0.7m_{1}}{4})}{0.7m_{1}} = -9.42$$
+    Таким образом получаем выражение для $\ddot{x}_{2}$:
+    $$\ddot{x}_{2} = \frac{-4.05}{-9.42} \approx 0.43$$
+    Найдем $\ddot{x}_{1}$ подставляя $\ddot{x}_{2}$ в одно из уравнений преобразованной системы 
+    $$\ddot{x}_{1} = \frac{0.7\cdot 9.8m_{1}}{2m_{1}+\frac{0.7m_{1}}{2}} - \frac{m_{1}9.8\cdot 0.5}{m_{1}+\frac{0.7m_{1}}{4}} - \frac{0.7\cdot 0.43m_{1}}{4m_{1}+0.7m_{1}} \approx - 1.31$$
+\newpage 
+
+\newpage
+    Учитывая направления осей координат, получим $W_{1}=1.31\frac{M}{C^2}$, $W_{2}=0.43\frac{M}{C^2}$
+    %
+    \begin{figure}[h]
+    \center{\includegraphics[width=1\linewidth]{1221.jpg}}
+    \caption{Схема к задаче 12.21}
+    \label{ris:image}
+    \end{figure}
+\newpage% конец задачи 12.21
+
+\end{document}  % КОНЕЦ ДОКУМЕНТА !
